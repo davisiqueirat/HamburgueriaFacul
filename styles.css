@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+.header {
+    background-image: url('./assets/pngtree-restaurant-with-tables-and-chairs-and-paintings-picture-image_3426469.png');
+    background-size: cover; /* Ajusta a imagem para cobrir todo o espaço do header */
+    background-position: center; 
+    height: 320px; 
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.logo:hover{
+    transform: scale(1.05); /* Aumenta o tamanho do item ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+
+.title {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: white;
+
+}
+
+.working-hours {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.working-hours:hover{
+    transform: scale(1.10);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    background-color: #14ce4c; 
+}
+.menu-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 520px) {
+    .menu {
+        grid-template-columns: 1fr; 
+        padding: 10px; 
+    }
+
+    .menu-item {
+        flex-direction: column; 
+        padding: 10px; 
+    }
+}
+.menu-item {
+    display: flex;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    list-style-type: none;
+    flex-direction: row;
+}
+.menu-item:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    background-color: #f1f1f1; 
+}
+.menu-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.menu-details {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.add-to-cart-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    position: relative; 
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 0; /* Garantir que o footer fique acima de outros elementos */
+}
+
+.cart-btn {
+    background-color: green;
+    color: white;
+    padding: 5px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cart-btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    background-color: #14ce4c; 
+}
+.cart-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    width: 300px;
+    height: 100%;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+    display: none; /* Inicialmente oculto */
+}
+.close-cart-btn {
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.clear-cart-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 5px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.checkout-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
