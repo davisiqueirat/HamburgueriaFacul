@@ -1,5 +1,5 @@
 // Inicializa o carrinho a partir do localStorage
-let cart = JSON.parse(localStorage.getItem("cart"));
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 // Seletores
 const cartCount = document.getElementById("cart-count");
 const cartContainer = document.getElementById("cart-container");
